@@ -1,0 +1,12 @@
+
+Questão 1: Agente Reativo Simples
+A sua solução é extensível para um mundo 3 x 3? 
+R: Sim, a solução é extensível e funciona perfeitamente, já que a varredura ou mapeamento é baseada em percorrer linha por linha até que atinja os limites das paredes, o padrão reativo de movimentação em ziguezague/ciclo é capaz de cobrir todo o ambiente menor.
+
+E para um mundo 6 x 6? 
+Aqui também funciona e é extensível, desde que o ciclo ou algoritmo de navegação seja ajustado para cobrir o número de células correspondente à matriz ou dinamicamente limitado pelas paredes periféricas. Caso o contrário, se for adotada a matriz atual é inviável.
+
+
+Questão 2: Agente Baseado em Objetivos
+É possível ter todo o espaço limpo efetivamente?
+R: Sim, é possível ter todo o espaço limpo efetivamente. O agente possui uma função objetivo (garantir que a sala esteja completamente limpa utilizando checkObj(sala) == 0`) e uma representação do estado interno (ou controle de passos/movimentos completos pela matriz). Ele percorre todas as posições mapeadas aspirando qualquer célula com sujeira. Assim que o objetivo é alcançado, ele executa a ação 'NoOp' e encerra a execução com o ambiente totalmente limpo e otimizado pelo contador de passos.
